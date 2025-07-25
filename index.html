@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetMe.Club - Speed Dating Real</title>
+    <meta name="description" content="Únete a MeetMe.Club para speed dating real. Conoce personas auténticas en eventos organizados. ¡Regístrate gratis!">
+    <meta name="keywords" content="speed dating, citas, conocer gente, dating, amor, pareja, MeetMe Club">
+    <meta property="og:title" content="MeetMe.Club - Speed Dating Real">
+    <meta property="og:description" content="Olvídate del swipe infinito. Conoce personas reales en eventos de speed dating.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 140px;
+            height: auto;
+            filter: brightness(1.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #20B2AA;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(32, 178, 170, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="100" fill="%2320B2AA" opacity="0.1"/><circle cx="800" cy="800" r="150" fill="%2320B2AA" opacity="0.05"/><circle cx="600" cy="300" r="80" fill="%23008B8B" opacity="0.1"/></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero-text .highlight {
+            background: linear-gradient(135deg, #20B2AA, #00CED1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text p {
+            font-size: 1.3rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            color: white;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(32, 178, 170, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 35px;
+            border: 2px solid #20B2AA;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #20B2AA;
+            transform: translateY(-3px);
+        }
+        
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .dating-visual {
+            width: 400px;
+            height: 300px;
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dating-visual::before {
+            content: '💕';
+            font-size: 4rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatHeart 4s ease-in-out infinite;
+        }
+        
+        .heart-1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .heart-2 { top: 60%; right: 15%; animation-delay: 1s; }
+        .heart-3 { bottom: 30%; left: 20%; animation-delay: 2s; }
+        
+        @keyframes floatHeart {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-15px) rotate(5deg); opacity: 1; }
+        }
+        
+        /* How it Works Section */
+        .how-it-works {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+        }
+        
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(32, 178, 170, 0.2);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+        }
+        
+        .step h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+        
+        .step p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        /* Features Section */
+        .features {
+            background: #000;
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g"><stop stop-color="%2320B2AA" stop-opacity="0.1"/><stop offset="1" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="200" fill="url(%23g)"/><circle cx="900" cy="900" r="300" fill="url(%23g)"/></svg>');
+        }
+        
+        .features-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .features .section-title h2 {
+            color: white;
+        }
+        
+        .features .section-title p {
+            color: #cccccc;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(32, 178, 170, 0.2);
+            padding: 40px 30px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            border-color: #20B2AA;
+            box-shadow: 0 20px 60px rgba(32, 178, 170, 0.3);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .feature p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat {
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #666;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .dating-visual {
+                width: 300px;
+                height: 250px;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 35C10 25 15 15 25 15C35 15 40 25 40 35C40 45 35 55 25 55C15 55 10 45 10 35Z" fill="none" stroke="#20B2AA" stroke-width="3"/>
+                    <path d="M25 20C30 25 35 30 40 35" stroke="#20B2AA" stroke-width="2" fill="none"/>
+                    <text x="50" y="30" font-family="Inter" font-size="18" font-weight="700" fill="white">meetme</text>
+                    <text x="50" y="45" font-family="Inter" font-size="14" font-weight="500" fill="#20B2AA">.club</text>
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#como-funciona">Cómo Funciona</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#registro" class="cta-button" onclick="showRegistrationForm(); return false;">Únete Ahora</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-text">
+                    <h1>Speed Dating <span class="highlight">Real</span></h1>
+                    <p>Olvídate del swipe infinito. Conoce personas reales en eventos de speed dating organizados especialmente para encontrar tu match perfecto.</p>
+                    <div class="hero-buttons">
+                        <a href="#registro" class="btn-primary" onclick="showRegistrationForm(); return false;">Registrarme Gratis</a>
+                        <a href="#como-funciona" class="btn-secondary">Ver Cómo Funciona</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dating-visual">
+                        <!-- Visual placeholder for dating scene -->
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-heart heart-1">💕</div>
+                        <div class="floating-heart heart-2">❤️</div>
+                        <div class="floating-heart heart-3">💖</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-title slide-up">
+                <h2>Así Funciona MeetMe.Club</h2>
+                <p>Un proceso simple y divertido para encontrar tu pareja ideal en la vida real</p>
+            </div>
+            <div class="steps">
+                <div class="step slide-up">
+                    <div class="step-icon">📝</div>
+                    <h3>Regístrate</h3>
+                    <p>Completa tu perfil y cuéntanos qué buscas. Nuestro sistema The Next Fun Match creará tu perfil perfecto.</p>
+                </div>
+                <div class="step slide-up">
+                    <div class="step-icon">🎯</div>
+                    <h3>Te Emparejamos</h3>
+                    <p>Nuestro algoritmo inteligente selecciona a las personas más compatibles contigo para el evento.</p>
+                </div>
+                <div class="step slide-up">
+                    <div class="step-icon">💕</div>
+                    <h3>Speed Dating</h3>
+                    <p>Asiste a nuestro evento y conoce a tu match en mini-citas de 5 minutos. ¡Química instantánea garantizada!</p>
+                </div>
+                <div class="step slide-up">
+                    <div class="step-icon">🌟</div>
+                    <h3>Conecta</h3>
+                    <p>Si hay match mutuo, te conectamos para que puedan continuar conociéndose. ¡El resto es historia!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="section-title slide-up">
+                    <h2>¿Por Qué MeetMe.Club?</h2>
+                    <p>La forma más auténtica y divertida de encontrar el amor</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature slide-up">
+                        <div class="feature-icon">🎭</div>
+                        <h3>Conexiones Reales</h3>
+                        <p>Nada de filtros ni fotos engañosas. Conoce a las personas tal como son en la vida real.</p>
+                    </div>
+                    <div class="feature slide-up">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Química Instantánea</h3>
+                        <p>5 minutos son suficientes para saber si hay química. El speed dating funciona.</p>
+                    </div>
+                    <div class="feature slide-up">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Ambiente Seguro</h3>
+                        <p>Eventos en locaciones verificadas con moderadores profesionales. Tu seguridad es nuestra prioridad.</p>
+                    </div>
+                    <div class="feature slide-up">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Matches Precisos</h3>
+                        <p>Nuestro algoritmo The Next Fun Match te conecta con personas realmente compatibles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid slide-up">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Parejas Formadas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">Tasa de Match</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Eventos Realizados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2000+</span>
+                    <span class="stat-label">Miembros Activos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="registro">
+        <div class="container">
+            <h2 class="slide-up">¿Listo Para Encontrar el Amor?</h2>
+            <p class="slide-up">Únete a MeetMe.Club y participa en nuestro próximo evento de speed dating. Tu pareja ideal te está esperando.</p>
+            <a href="#" class="btn-primary slide-up" onclick="showRegistrationForm(); return false;">Registrarme Ahora - Es Gratis</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MeetMe.Club. Todos los derechos reservados. Conectando corazones en la vida real.</p>
+        </div>
+    </footer>
+
+    <!-- Registration Form Modal -->
+    <div id="registrationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; backdrop-filter: blur(5px);">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%; padding: 20px;">
+            <div style="background: white; padding: 40px; border-radius: 20px; max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                    <h2 style="color: #1a202c; margin: 0;">Únete a MeetMe.Club</h2>
+                    <button onclick="closeRegistrationForm()" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
+                </div>
+                <form id="registrationForm" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Nombre Completo</label>
+                        <input type="text" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Email</label>
+                        <input type="email" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Teléfono</label>
+                        <input type="tel" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Edad</label>
+                        <input type="number" min="18" max="80" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Género</label>
+                        <select required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                            <option value="">Selecciona tu género</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Buscas</label>
+                        <select required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                            <option value="">¿Qué buscas?</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="ambos">Ambos</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Rango de Edad Preferido</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <input type="number" placeholder="De" min="18" style="padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                            <input type="number" placeholder="Hasta" max="80" style="padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Cuéntanos sobre ti</label>
+                        <textarea style="width: 100%; padding: 12px; border: 2px solid #e2e8
