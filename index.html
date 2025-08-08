@@ -202,48 +202,15 @@
         .dating-visual {
             width: 400px;
             height: 300px;
-            background: linear-gradient(135deg, #20B2AA, #008B8B);
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .dating-visual::before {
-            content: '💕';
-            font-size: 4rem;
-            animation: pulse 2s infinite;
+            box-shadow: 0 20px 60px rgba(32, 178, 170, 0.3);
         }
         
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.1); }
-        }
-        
-        .floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-        }
-        
-        .floating-heart {
-            position: absolute;
-            font-size: 2rem;
-            animation: floatHeart 4s ease-in-out infinite;
-        }
-        
-        .heart-1 { top: 20%; left: 10%; animation-delay: 0s; }
-        .heart-2 { top: 60%; right: 15%; animation-delay: 1s; }
-        .heart-3 { bottom: 30%; left: 20%; animation-delay: 2s; }
-        
-        @keyframes floatHeart {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
-            50% { transform: translateY(-15px) rotate(5deg); opacity: 1; }
         }
         
         /* How it Works Section */
@@ -555,13 +522,8 @@
                 <div class="hero-visual">
                     <div class="dating-visual">
                         <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-        <source src="meetme.landing.video1.mp4" type="video/mp4">
-                            </video>
-                    </div>
-                    <div class="hero-visual">
-    <div class="dating-visual">
-        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-            <source src="meetme.landing.video1.mp4" type="video/mp4">
+                            <source src="meetme.landing.video1.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -587,7 +549,7 @@
                     <p>Nuestro algoritmo inteligente selecciona a las personas más compatibles contigo para el evento.</p>
                 </div>
                 <div class="step slide-up">
-                    <div class="step-icon">💕</div>
+                    <div class="step-icon">🎪</div>
                     <h3>Speed Dating</h3>
                     <p>Asiste a nuestro evento y conoce a tu match en mini-citas de 5 minutos. ¡Química instantánea garantizada!</p>
                 </div>
@@ -726,4 +688,48 @@
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Cuéntanos sobre ti</label>
-                        <textarea style="width: 100%; padding: 12px; border: 2px solid #e2e8
+                        <textarea placeholder="Describe tus intereses, qué buscas en una pareja..." style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" style="background: linear-gradient(135deg, #20B2AA, #008B8B); color: white; padding: 15px; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                        Registrarme Gratis
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRegistrationForm() {
+            document.getElementById('registrationModal').style.display = 'block';
+        }
+        
+        function closeRegistrationForm() {
+            document.getElementById('registrationModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('registrationModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeRegistrationForm();
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por registrarte! Te contactaremos pronto con información sobre nuestros próximos eventos.');
+            closeRegistrationForm();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
