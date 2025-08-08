@@ -503,7 +503,7 @@
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <a href="https://app.meetme.club" class="cta-button" onclick="showRegistrationForm(); return false;">Log In</a>
+            <a href="https://app.meetme.club" target="_blank" rel="noopener noreferrer" class="cta-button">Log In</a>
         </nav>
     </header>
 
@@ -521,9 +521,20 @@
                 </div>
                 <div class="hero-visual">
                     <div class="dating-visual">
-                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-                            <source src="meetme.landing.video1.mp4" type="video/mp4">
-                        </video>
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://www.youtube.com/embed/vZkHfO-Riq8?autoplay=1&mute=1&loop=1&playlist=vZkHfO-Riq8&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1" 
+                            title="MeetMe Club Video" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            style="border-radius: 20px; object-fit: cover;">
+                        </iframe>
+                        <!-- Fallback si YouTube no carga -->
+                        <div id="videoFallback" style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, #20B2AA, #008B8B); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                            🎯
+                        </div>
                     </div>
                 </div>
             </div>
