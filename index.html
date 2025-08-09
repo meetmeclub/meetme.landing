@@ -47,7 +47,7 @@
             background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 15px 0;
+            padding: 12px 0; /* Reducido de 15px a 12px */
             transition: all 0.3s ease;
         }
         
@@ -58,7 +58,7 @@
         }
         
         .logo {
-            width: 140px;
+            width: 120px; /* Reducido de 140px a 120px */
             height: auto;
             filter: brightness(1.1);
         }
@@ -83,7 +83,7 @@
         .cta-button {
             background: linear-gradient(135deg, #20B2AA, #008B8B);
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px; /* Reducido de 12px 25px */
             border: none;
             border-radius: 25px;
             font-weight: 600;
@@ -106,6 +106,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding-top: 80px; /* AÑADIDO: Espacio para el header fijo */
         }
         
         .hero::before {
@@ -447,6 +448,10 @@
                 display: none;
             }
             
+            .hero {
+                padding-top: 70px; /* Ajustado para móviles */
+            }
+            
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -708,46 +713,4 @@
                         <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Cuéntanos sobre ti</label>
                         <textarea placeholder="Describe tus intereses, qué buscas en una pareja..." style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
                     </div>
-                    <button type="submit" style="background: linear-gradient(135deg, #20B2AA, #008B8B); color: white; padding: 15px; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
-                        Registrarme Gratis
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function showRegistrationForm() {
-            document.getElementById('registrationModal').style.display = 'block';
-        }
-        
-        function closeRegistrationForm() {
-            document.getElementById('registrationModal').style.display = 'none';
-        }
-        
-        // Close modal when clicking outside
-        document.getElementById('registrationModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeRegistrationForm();
-            }
-        });
-        
-        // Handle form submission
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por registrarte! Te contactaremos pronto con información sobre nuestros próximos eventos.');
-            closeRegistrationForm();
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+                    <button type="submit" style="background:
