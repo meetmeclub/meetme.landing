@@ -477,9 +477,9 @@
             transition: all 0.4s ease;
             background: rgba(32, 178, 170, 0.02);
         }
-        
-        .faq-answer.active {
-            max-height: 500px;
+
+        /* --- CÓDIGO CORREGIDO --- */
+        .faq-item.active .faq-answer {
             padding: 0 30px 25px 30px;
         }
         
@@ -872,7 +872,7 @@
             document.querySelectorAll('.faq-item').forEach(activeItem => {
                 if (activeItem !== item) {
                     activeItem.classList.remove('active');
-                    activeItem.querySelector('.faq-answer').style.maxHeight = null;
+                    activeItem.querySelector('.faq-answer').style.maxHeight = 0; // Se cambió 'null' por '0'
                     activeItem.querySelector('.faq-question').classList.remove('active');
                 }
             });
@@ -880,7 +880,7 @@
             const isActive = item.classList.contains('active');
             if (isActive) {
                 item.classList.remove('active');
-                answer.style.maxHeight = null;
+                answer.style.maxHeight = 0; // --- CÓDIGO CORREGIDO ---
                 element.classList.remove('active');
             } else {
                 item.classList.add('active');
