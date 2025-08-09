@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meetme.club - Speed Dating Real</title>
     
-    <!-- Favicon - Logo en la pestaña -->
     <link rel="icon" type="image/png" sizes="32x32" href="meetme.club.logo.website.png">
     <link rel="icon" type="image/png" sizes="16x16" href="meetme.club.logo.website.png">
     <link rel="shortcut icon" href="meetme.club.logo.website.png">
@@ -594,7 +593,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">
@@ -612,7 +610,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container">
             <div class="hero-content fade-in">
@@ -636,7 +633,6 @@
                             allowfullscreen
                             style="border-radius: 20px; object-fit: cover;">
                         </iframe>
-                        <!-- Fallback si YouTube no carga -->
                         <div id="videoFallback" style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, #20B2AA, #008B8B); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
                             🎯
                         </div>
@@ -646,7 +642,6 @@
         </div>
     </section>
 
-    <!-- How it Works -->
     <section class="how-it-works" id="como-funciona">
         <div class="container">
             <div class="section-title slide-up">
@@ -678,7 +673,6 @@
         </div>
     </section>
 
-    <!-- Features -->
     <section class="features">
         <div class="container">
             <div class="features-content">
@@ -712,7 +706,6 @@
         </div>
     </section>
 
-    <!-- Stats -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid slide-up">
@@ -736,7 +729,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-title slide-up">
@@ -745,161 +737,36 @@
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question-static">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
                         <h3>¿Cómo funciona el proceso de registro?</h3>
+                        <span class="faq-arrow">▼</span>
                     </div>
-                    <div class="faq-answer-static">
+                    <div class="faq-answer">
                         <p>El registro es completamente gratis. Solo necesitas completar tu perfil con información básica, tus preferencias y una breve descripción sobre ti. Nuestro algoritmo The Next Fun Match analizará tu perfil para encontrar las mejores conexiones compatibles para ti en cada evento.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Cómo funciona el emparejamiento?</h3>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué diferencia a meetme.club de las apps de citas?</h3>
+                        <span class="faq-arrow">▼</span>
                     </div>
-                    <div class="faq-answer-static">
-                        <p>Utilizamos un algoritmo avanzado que considera edad, intereses, personalidad y preferencias para crear matches compatibles. Antes de cada evento, seleccionamos cuidadosamente a los participantes para maximizar las posibilidades de conexión real entre los asistentes.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Qué debo llevar a un evento de SPEED DATING?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <div class="faq-list">
-                            <p><strong>1. Teléfono con batería cargada</strong> - Usamos una app web para gestionar el speed dating. No necesitas descargar nada.</p>
-                            <p><strong>2. Documento de identidad</strong> - La mayoría de eventos incluyen bebidas, así que necesitarás tu ID.</p>
-                            <p><strong>3. Mente abierta</strong> - Diviértete, sé abierto y genuino. La autenticidad es la clave del éxito.</p>
-                            <p><strong>4. Actitud positiva</strong> - Ven preparado para conocer personas increíbles y pasar un rato genial.</p>
-                        </div>
+                    <div class="faq-answer">
+                        <p>Con nosotros, no hay swipe infinito, fotos filtradas o conversaciones que no llevan a nada. Aquí conoces personas reales, cara a cara, en un ambiente divertido y seguro. Nuestro algoritmo pre-selecciona matches compatibles, así que cada persona que conoces tiene potencial real. ¡Es dating en la vida real, como debe ser!</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question-static">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
                         <h3>¿Cuánto cuesta participar en un evento?</h3>
+                        <span class="faq-arrow">▼</span>
                     </div>
-                    <div class="faq-answer-static">
+                    <div class="faq-answer">
                         <p>Los precios varían según el evento y la locación, pero generalmente oscilan entre $50.000 y $80.000 COP. Este precio incluye el evento completo, bebidas de bienvenida, snacks y todo el proceso de matchmaking. ¡El registro en la plataforma es completamente gratis!</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Qué pasa después del evento?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Al final del evento, recibirás tus resultados de matches dentro de 24 horas. Si hay interés mutuo con alguien, te conectaremos con esa persona a través de nuestra plataforma para que puedan continuar conociéndose. También recibirás invitaciones a futuros eventos que sean perfectos para ti.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Es seguro asistir a los eventos?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Absolutamente. Todos nuestros eventos se realizan en locaciones públicas verificadas con personal de seguridad. Tenemos moderadores profesionales en cada evento y verificamos la identidad de todos los participantes. Tu seguridad y comodidad son nuestra máxima prioridad.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Qué edades participan en los eventos?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Organizamos eventos para diferentes rangos de edad: 25-35, 30-45, y 40+. Cada evento está diseñado específicamente para su grupo demográfico, asegurando que todos los participantes estén en etapas similares de la vida y buscando conexiones apropiadas para su edad.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Cómo me visto para un evento de speed dating?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Vístete como te sientes cómodo pero elegante. Recomendamos ropa casual-elegante: para hombres, una camisa bonita con pantalones; para mujeres, un vestido casual o blusa con falda/pantalón. Lo importante es que te sientas seguro y auténtico. ¡Las primeras impresiones importan pero la personalidad es lo que realmente conecta!</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Puedo ir con amigos al evento?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>¡Por supuesto! Muchas personas vienen con amigos para sentirse más cómodos. Sin embargo, durante las mini-citas participas individualmente. Tus amigos pueden registrarse por separado y disfrutar del mismo evento. ¡Es más divertido cuando compartes la experiencia!</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Qué pasa si soy tímido/a?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>¡No te preocupes! Nuestros eventos están diseñados especialmente para personas tímidas. El formato estructurado de 5 minutos hace que sea fácil conversar sin presión. Nuestros moderadores te guiarán y tendrás preguntas sugeridas para romper el hielo. Muchos participantes tímidos terminan siendo los más exitosos porque son auténticos y genuinos.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Con qué frecuencia organizan eventos?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Organizamos eventos cada 2 semanas aproximadamente en Bogotá, alternando entre diferentes zonas de la ciudad (Zona Rosa, Chapinero, La Macarena). También tenemos eventos especiales temáticos una vez al mes. Te notificaremos por email y WhatsApp sobre los próximos eventos que sean perfectos para tu perfil.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Qué diferencia a meetme.club de las apps de citas?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Con nosotros, no hay swipe infinito, fotos filtradas o conversaciones que no llevan a nada. Aquí conoces personas reales, cara a cara, en un ambiente divertido y seguro. Nuestro algoritmo pre-selecciona matches compatibles, así que cada persona que conoces tiene potencial real. ¡Es dating en la vida real, como debe ser!</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question-static">
-                        <h3>¿Ofrecen reembolsos si no puedo asistir?</h3>
-                    </div>
-                    <div class="faq-answer-static">
-                        <p>Sí, ofrecemos reembolso completo si cancelas con al menos 48 horas de anticipación. Si cancelas con menos tiempo, puedes transferir tu boleto a otro evento sin costo adicional. Entendemos que a veces surgen imprevistos, por eso somos flexibles con nuestras políticas.</p>
-                    </div>
-                </div>
-            </div>             <p>Absolutamente. Todos nuestros eventos se realizan en locaciones públicas verificadas con personal de seguridad. Tenemos moderadores profesionales en cada evento y verificamos la identidad de todos los participantes. Tu seguridad y comodidad son nuestra máxima prioridad.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>¿Qué edades participan en los eventos?</h3>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Organizamos eventos para diferentes rangos de edad: 25-35, 30-45, y 40+. Cada evento está diseñado específicamente para su grupo demográfico, asegurando que todos los participantes estén en etapas similares de la vida y buscando conexiones apropiadas para su edad.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>¿Cómo me visto para un evento de speed dating?</h3>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Vístete como te sientes cómodo pero elegante. Recomendamos ropa casual-elegante: para hombres, una camisa bonita con pantalones; para mujeres, un vestido casual o blusa con falda/pantalón. Lo importante es que te sientas seguro y auténtico. ¡Las primeras impresiones importan pero la personalidad es lo que realmente conecta!</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>¿Puedo ir con amigos al evento?</h3>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>¡Por supuesto! Muchas personas vienen con amigos para sentirse más cómodos. Sin embargo, durante las mini-citas participas individualmente. Tus amigos pueden registrarse por separado y disfrutar del mismo evento. ¡Es más divertido cuando compartes la experiencia!</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
                         <h3>¿Qué pasa si soy tímido/a?</h3>
                         <span class="faq-arrow">▼</span>
@@ -911,38 +778,17 @@
                 
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>¿Con qué frecuencia organizan eventos?</h3>
+                        <h3>¿Qué edades participan en los eventos?</h3>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Organizamos eventos cada 2 semanas aproximadamente en Bogotá, alternando entre diferentes zonas de la ciudad (Zona Rosa, Chapinero, La Macarena). También tenemos eventos especiales temáticos una vez al mes. Te notificaremos por email y WhatsApp sobre los próximos eventos que sean perfectos para tu perfil.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>¿Qué diferencia a meetme.club de las apps de citas?</h3>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Con nosotros, no hay swipe infinito, fotos filtradas o conversaciones que no llevan a nada. Aquí conoces personas reales, cara a cara, en un ambiente divertido y seguro. Nuestro algoritmo pre-selecciona matches compatibles, así que cada persona que conoces tiene potencial real. ¡Es dating en la vida real, como debe ser!</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>¿Ofrecen reembolsos si no puedo asistir?</h3>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sí, ofrecemos reembolso completo si cancelas con al menos 48 horas de anticipación. Si cancelas con menos tiempo, puedes transferir tu boleto a otro evento sin costo adicional. Entendemos que a veces surgen imprevistos, por eso somos flexibles con nuestras políticas.</p>
+                        <p>Organizamos eventos para diferentes rangos de edad: 25-35, 30-45, y 40+. Cada evento está diseñado específicamente para su grupo demográfico, asegurando que todos los participantes estén en etapas similares de la vida y buscando conexiones apropiadas para su edad.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta" id="registro">
         <div class="container">
             <h2 class="slide-up">¿Listo Para Encontrar el Amor?</h2>
@@ -951,14 +797,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 meetme.club. Todos los derechos reservados. Conectando corazones en la vida real.</p>
         </div>
     </footer>
 
-    <!-- Registration Form Modal -->
     <div id="registrationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; backdrop-filter: blur(5px);">
         <div style="display: flex; justify-content: center; align-items: center; height: 100%; padding: 20px;">
             <div style="background: white; padding: 40px; border-radius: 20px; max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto;">
@@ -1012,4 +856,83 @@
                         <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Cuéntanos sobre ti</label>
                         <textarea placeholder="Describe tus intereses, qué buscas en una pareja..." style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
                     </div>
-                    <button type="submit" style="background:
+                    <button type="submit" style="background: linear-gradient(135deg, #20B2AA, #008B8B); color: white; padding: 15px; border-radius: 15px; font-size: 1.1rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s ease;">
+                        Enviar Registro
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Función para manejar el acordeón de las FAQs
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            
+            // Cierra todos los demás
+            document.querySelectorAll('.faq-item').forEach(activeItem => {
+                if (activeItem !== item) {
+                    activeItem.classList.remove('active');
+                    activeItem.querySelector('.faq-answer').style.maxHeight = null;
+                    activeItem.querySelector('.faq-question').classList.remove('active');
+                }
+            });
+
+            // Abre o cierra el elemento actual
+            const isActive = item.classList.contains('active');
+            if (isActive) {
+                item.classList.remove('active');
+                answer.style.maxHeight = null;
+                element.classList.remove('active');
+            } else {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                element.classList.add('active');
+            }
+        }
+
+        // Código para el formulario de registro modal
+        function showRegistrationForm() {
+            const modal = document.getElementById('registrationModal');
+            modal.style.display = 'block';
+        }
+
+        function closeRegistrationForm() {
+            const modal = document.getElementById('registrationModal');
+            modal.style.display = 'none';
+        }
+
+        // Para cerrar el modal haciendo clic fuera de él
+        document.getElementById('registrationModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeRegistrationForm();
+            }
+        });
+
+        // Código para las animaciones al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.slide-up, .fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Código para la barra de navegación que se minimiza al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '8px 0'; // Nuevo padding reducido
+            } else {
+                header.style.padding = '12px 0'; // Padding original
+            }
+        });
+    </script>
+</body>
+</html>
