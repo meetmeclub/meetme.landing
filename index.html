@@ -46,7 +46,7 @@
             background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 12px 0; /* Reducido de 15px a 12px */
+            padding: 12px 0;
             transition: all 0.3s ease;
         }
         
@@ -57,7 +57,7 @@
         }
         
         .logo {
-            width: 120px; /* Reducido de 140px a 120px */
+            width: 120px;
             height: auto;
             filter: brightness(1.1);
         }
@@ -82,7 +82,7 @@
         .cta-button {
             background: linear-gradient(135deg, #20B2AA, #008B8B);
             color: white;
-            padding: 10px 20px; /* Reducido de 12px 25px */
+            padding: 10px 20px;
             border: none;
             border-radius: 25px;
             font-weight: 600;
@@ -105,7 +105,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px; /* AÑADIDO: Espacio para el header fijo */
+            padding-top: 80px;
         }
         
         .hero::before {
@@ -491,7 +491,7 @@
         
         .faq-list p {
             margin: 12px 0;
-            padding-left: 15px;
+            padding-left: 0;
             position: relative;
         }
         
@@ -499,7 +499,7 @@
             content: "•";
             color: #20B2AA;
             position: absolute;
-            left: 0;
+            left: -15px;
             font-weight: bold;
         }
         
@@ -541,7 +541,7 @@
             }
             
             .hero {
-                padding-top: 70px; /* Ajustado para móviles */
+                padding-top: 70px;
             }
             
             .hero-content {
@@ -865,12 +865,10 @@
     </div>
     
     <script>
-        // Función para manejar el acordeón de las FAQs
         function toggleFAQ(element) {
             const item = element.parentElement;
             const answer = item.querySelector('.faq-answer');
             
-            // Cierra todos los demás
             document.querySelectorAll('.faq-item').forEach(activeItem => {
                 if (activeItem !== item) {
                     activeItem.classList.remove('active');
@@ -879,7 +877,6 @@
                 }
             });
 
-            // Abre o cierra el elemento actual
             const isActive = item.classList.contains('active');
             if (isActive) {
                 item.classList.remove('active');
@@ -892,7 +889,6 @@
             }
         }
 
-        // Código para el formulario de registro modal
         function showRegistrationForm() {
             const modal = document.getElementById('registrationModal');
             modal.style.display = 'block';
@@ -903,14 +899,12 @@
             modal.style.display = 'none';
         }
 
-        // Para cerrar el modal haciendo clic fuera de él
         document.getElementById('registrationModal').addEventListener('click', function(event) {
             if (event.target === this) {
                 closeRegistrationForm();
             }
         });
 
-        // Código para las animaciones al hacer scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -924,13 +918,12 @@
             observer.observe(element);
         });
 
-        // Código para la barra de navegación que se minimiza al hacer scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.style.padding = '8px 0'; // Nuevo padding reducido
+                header.style.padding = '8px 0';
             } else {
-                header.style.padding = '12px 0'; // Padding original
+                header.style.padding = '12px 0';
             }
         });
     </script>
