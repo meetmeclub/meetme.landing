@@ -408,11 +408,104 @@
             opacity: 0.9;
         }
         
-        /* CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        /* FAQ Section */
+        .faq {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 100px 0;
-            text-align: center;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(32, 178, 170, 0.15);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .faq-question:hover {
+            background: rgba(32, 178, 170, 0.05);
+        }
+        
+        .faq-question.active {
+            background: rgba(32, 178, 170, 0.1);
+            border-bottom-color: rgba(32, 178, 170, 0.2);
+        }
+        
+        .faq-question h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .faq-arrow {
+            font-size: 1.2rem;
+            color: #20B2AA;
+            transition: transform 0.3s ease;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        
+        .faq-question.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            background: rgba(32, 178, 170, 0.02);
+        }
+        
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 30px 25px 30px;
+        }
+        
+        .faq-answer p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin: 15px 0;
+        }
+        
+        .faq-list p {
+            margin: 12px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .faq-list p::before {
+            content: "•";
+            color: #20B2AA;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .faq-answer strong {
+            color: #20B2AA;
         }
         
         .final-cta h2 {
@@ -512,7 +605,7 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#como-funciona">Cómo Funciona</a></li>
-                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <a href="https://app.meetme.club" target="_blank" rel="noopener noreferrer" class="cta-button">Log In</a>
@@ -638,6 +731,92 @@
                 <div class="stat">
                     <span class="stat-number">2000+</span>
                     <span class="stat-label">Miembros Activos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title slide-up">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Todo lo que necesitas saber sobre meetme.club</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cómo funciona el proceso de registro?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El registro es completamente gratis. Solo necesitas completar tu perfil con información básica, tus preferencias y una breve descripción sobre ti. Nuestro algoritmo The Next Fun Match analizará tu perfil para encontrar las mejores conexiones compatibles para ti en cada evento.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cómo funciona el emparejamiento?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Utilizamos un algoritmo avanzado que considera edad, intereses, personalidad y preferencias para crear matches compatibles. Antes de cada evento, seleccionamos cuidadosamente a los participantes para maximizar las posibilidades de conexión real entre los asistentes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué debo llevar a un evento de SPEED DATING?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-list">
+                            <p><strong>1. Teléfono con batería cargada</strong> - Usamos una app web para gestionar el speed dating. No necesitas descargar nada.</p>
+                            <p><strong>2. Documento de identidad</strong> - La mayoría de eventos incluyen bebidas, así que necesitarás tu ID.</p>
+                            <p><strong>3. Mente abierta</strong> - Diviértete, sé abierto y genuino. La autenticidad es la clave del éxito.</p>
+                            <p><strong>4. Actitud positiva</strong> - Ven preparado para conocer personas increíbles y pasar un rato genial.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cuánto cuesta participar en un evento?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los precios varían según el evento y la locación, pero generalmente oscilan entre $50.000 y $80.000 COP. Este precio incluye el evento completo, bebidas de bienvenida, snacks y todo el proceso de matchmaking. ¡El registro en la plataforma es completamente gratis!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué pasa después del evento?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Al final del evento, recibirás tus resultados de matches dentro de 24 horas. Si hay interés mutuo con alguien, te conectaremos con esa persona a través de nuestra plataforma para que puedan continuar conociéndose. También recibirás invitaciones a futuros eventos que sean perfectos para ti.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Es seguro asistir a los eventos?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Todos nuestros eventos se realizan en locaciones públicas verificadas con personal de seguridad. Tenemos moderadores profesionales en cada evento y verificamos la identidad de todos los participantes. Tu seguridad y comodidad son nuestra máxima prioridad.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué edades participan en los eventos?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Organizamos eventos para diferentes rangos de edad: 25-35, 30-45, y 40+. Cada evento está diseñado específicamente para su grupo demográfico, asegurando que todos los participantes estén en etapas similares de la vida y buscando conexiones apropiadas para su edad.</p>
+                    </div>
                 </div>
             </div>
         </div>
