@@ -70,18 +70,25 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 20px; /* Reducido para mejor ajuste */
+            align-items: center;
         }
         
+        /* --- ESTILOS DE BOTÓN PARA ENLACES DE NAVEGACIÓN --- */
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+            transition: all 0.3s ease;
+            white-space: nowrap; /* Evita que el texto se parta */
         }
         
         .nav-links a:hover {
-            color: #20B2AA;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(32, 178, 170, 0.4);
         }
         
         .cta-button {
@@ -352,7 +359,7 @@
             padding: 40px 30px;
             border-radius: 20px;
             transition: all 0.3s ease;
-            text-align: center; /* --- LÍNEA AÑADIDA PARA CENTRAR TEXTO --- */
+            text-align: center;
         }
         
         .feature:hover {
@@ -369,7 +376,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px; /* --- LÍNEA MODIFICADA PARA CENTRAR ICONO --- */
+            margin: 0 auto 20px;
             font-size: 1.5rem;
         }
         
@@ -390,12 +397,25 @@
             background: linear-gradient(135deg, #20B2AA, #008B8B);
             padding: 80px 0;
             text-align: center;
+            position: relative; /* Añadido para posicionar el pseudo-elemento */
+            overflow: hidden;   /* Añadido para contener las formas */
+        }
+
+        /* --- NUEVA DECORACIÓN PARA SECCIÓN DE NÚMEROS --- */
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="white" opacity="0.1" cx="150" cy="850" r="120"/><circle fill="white" opacity="0.15" cx="800" cy="100" r="180"/><circle fill="white" opacity="0.05" cx="500" cy="500" r="80"/></svg>');
+            background-repeat: no-repeat;
         }
         
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
+            position: relative; /* Añadido para estar sobre la decoración */
+            z-index: 2;         /* Añadido para estar sobre la decoración */
         }
         
         .stat {
@@ -635,6 +655,7 @@
             <ul class="nav-links">
                 <li><a href="#como-funciona">Cómo funciona</a></li>
                 <li><a href="#why-meetme">¿Por qué meetme.club?</a></li>
+                <li><a href="#stats">Nuestro algoritmo en números</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
@@ -736,7 +757,7 @@
         </div>
     </section>
 
-    <section class="stats">
+    <section class="stats" id="stats">
         <div class="container">
             <div class="stats-grid slide-up">
                 <div class="stat">
