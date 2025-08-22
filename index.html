@@ -70,11 +70,10 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px; /* Reducido para mejor ajuste */
+            gap: 20px;
             align-items: center;
         }
         
-        /* --- ESTILOS DE BOTÓN PARA ENLACES DE NAVEGACIÓN --- */
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -83,7 +82,7 @@
             border-radius: 20px;
             background: linear-gradient(135deg, #20B2AA, #008B8B);
             transition: all 0.3s ease;
-            white-space: nowrap; /* Evita que el texto se parta */
+            white-space: nowrap;
         }
         
         .nav-links a:hover {
@@ -397,11 +396,10 @@
             background: linear-gradient(135deg, #20B2AA, #008B8B);
             padding: 80px 0;
             text-align: center;
-            position: relative; /* Añadido para posicionar el pseudo-elemento */
-            overflow: hidden;   /* Añadido para contener las formas */
+            position: relative;
+            overflow: hidden;
         }
 
-        /* --- NUEVA DECORACIÓN PARA SECCIÓN DE NÚMEROS --- */
         .stats::before {
             content: '';
             position: absolute;
@@ -414,8 +412,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
-            position: relative; /* Añadido para estar sobre la decoración */
-            z-index: 2;         /* Añadido para estar sobre la decoración */
+            position: relative;
+            z-index: 2;
         }
         
         .stat {
@@ -512,7 +510,7 @@
         .faq-answer p {
             color: #4a5568;
             line-height: 1.7;
-            margin: 15px 0;
+            margin-top: 15px;
         }
         
         .faq-list p {
@@ -578,11 +576,6 @@
             .logo {
                 width: 100px;
             }
-            .cta-button {
-                padding: 8px 16px;
-                font-size: 0.9rem;
-            }
-
             .nav-links {
                 display: none;
             }
@@ -836,7 +829,35 @@
                         <p>Nuestro sistema es personalizado. En lugar de eventos con rangos de edad fijos, tú nos indicas tu edad y el rango que te interesa. Nuestro algoritmo se encarga de que en cada evento te encuentres con personas que cumplan con tus preferencias, garantizando conexiones más relevantes y en etapas de vida similares.</p>
                     </div>
                 </div>
-            </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cómo y cuándo recibo mis matches después del evento?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La magia continúa después del evento. Al finalizar, tendrás tiempo para terminar de calificar tus citas directamente en nuestra plataforma. Durante las horas siguientes a la finalización del evento, recibirás un correo electrónico y una notificación con tus resultados. Si tuviste coincidencias (matches), les proporcionaremos los datos de contacto que autorizaron compartir para que puedan seguir la conversación. ¡El resto es historia!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Dónde se realizan los eventos?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Nos encanta elegir lugares con estilo! Seleccionamos cuidadosamente los mejores restaurantes, bares de vino, y rooftops de la ciudad para crear un ambiente cómodo y seguro. Las fechas y ubicaciones exactas de los próximos eventos siempre las anunciamos en nuestra página web y a través de nuestras redes sociales. ¡Síguenos para no perderte ninguna novedad!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cuántas citas tendré durante el evento?</h3>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cada evento está diseñado para maximizar tus oportunidades de conectar. Podrás conocer hasta 10 personas interesantes en una serie de citas de 8 minutos cada una. Este formato nos permite garantizar una experiencia dinámica y de calidad en una sola noche.</p>
+                    </div>
+                </div>
+                </div>
         </div>
     </section>
 
