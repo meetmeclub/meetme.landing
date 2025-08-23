@@ -414,7 +414,6 @@
             opacity: 0.9;
         }
 
-        /* --- INICIO ESTILOS NUEVA SECCIÓN EVENTOS --- */
         .events-section {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 100px 0;
@@ -430,7 +429,6 @@
             width: 100%;
             display: block;
         }
-        /* --- FIN ESTILOS NUEVA SECCIÓN EVENTOS --- */
         
         /* FAQ Section */
         .faq {
@@ -534,7 +532,7 @@
         .final-cta {
             background: #000;
             padding-top: 100px;
-            /* Se elimina padding-bottom para unir con la nueva sección */
+            text-align: center; /* --- AÑADIDO PARA CENTRAR TÍTULO Y BOTÓN --- */
         }
         
         .final-cta h2 {
@@ -549,10 +547,10 @@
             color: #cccccc;
             margin-bottom: 40px;
             max-width: 600px;
-            margin: 0 auto 40px auto; /* Centrado y con margen inferior */
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        /* --- INICIO ESTILOS NUEVA SECCIÓN ALIADOS --- */
         .partners {
             background: #000;
             padding: 40px 0 60px 0;
@@ -566,7 +564,7 @@
             flex-wrap: wrap;
         }
         .partner-logos img {
-            max-height: 50px;
+            max-height: 70px; /* --- AUMENTADO EL TAMAÑO DE LOS LOGOS --- */
             filter: grayscale(1) opacity(0.7);
             transition: all 0.3s ease;
         }
@@ -574,7 +572,6 @@
             filter: grayscale(0) opacity(1);
             transform: scale(1.1);
         }
-        /* --- FIN ESTILOS NUEVA SECCIÓN ALIADOS --- */
         
         /* Footer */
         footer {
@@ -807,6 +804,7 @@
             </div>
         </div>
     </section>
+
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-title slide-up">
@@ -911,6 +909,7 @@
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 meetme.club | Todos los derechos reservados | Data-Driven Matches, Human-Driven Moments.</p>
@@ -918,128 +917,4 @@
     </footer>
 
     <div id="registrationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; backdrop-filter: blur(5px);">
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%; padding: 20px;">
-            <div style="background: white; padding: 40px; border-radius: 20px; max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                    <h2 style="color: #1a202c; margin: 0;">Únete a meetme.club</h2>
-                    <button onclick="closeRegistrationForm()" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
-                </div>
-                <form id="registrationForm" style="display: flex; flex-direction: column; gap: 20px;">
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Nombre Completo</label>
-                        <input type="text" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Email</label>
-                        <input type="email" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Teléfono</label>
-                        <input type="tel" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Edad</label>
-                        <input type="number" min="18" max="80" required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Género</label>
-                        <select required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                            <option value="">Selecciona tu género</option>
-                            <option value="hombre">Hombre</option>
-                            <option value="mujer">Mujer</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Buscas</label>
-                        <select required style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                            <option value="">¿Qué buscas?</option>
-                            <option value="hombre">Hombre</option>
-                            <option value="mujer">Mujer</option>
-                            <option value="ambos">Ambos</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Rango de Edad Preferido</label>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <input type="number" placeholder="De" min="18" style="padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                            <input type="number" placeholder="Hasta" max="80" style="padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px;">
-                        </div>
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a202c;">Cuéntanos sobre ti</label>
-                        <textarea placeholder="Describe tus intereses, qué buscas en una pareja..." style="width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" style="background: linear-gradient(135deg, #20B2AA, #008B8B); color: white; padding: 15px; border-radius: 15px; font-size: 1.1rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s ease;">
-                        Enviar Registro
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function toggleFAQ(element) {
-            const item = element.parentElement;
-            const answer = item.querySelector('.faq-answer');
-            
-            document.querySelectorAll('.faq-item').forEach(activeItem => {
-                if (activeItem !== item) {
-                    activeItem.classList.remove('active');
-                    activeItem.querySelector('.faq-answer').style.maxHeight = 0;
-                    activeItem.querySelector('.faq-question').classList.remove('active');
-                }
-            });
-
-            const isActive = item.classList.contains('active');
-            if (isActive) {
-                item.classList.remove('active');
-                answer.style.maxHeight = 0;
-                element.classList.remove('active');
-            } else {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                element.classList.add('active');
-            }
-        }
-
-        function showRegistrationForm() {
-            const modal = document.getElementById('registrationModal');
-            modal.style.display = 'block';
-        }
-
-        function closeRegistrationForm() {
-            const modal = document.getElementById('registrationModal');
-            modal.style.display = 'none';
-        }
-
-        document.getElementById('registrationModal').addEventListener('click', function(event) {
-            if (event.target === this) {
-                closeRegistrationForm();
-            }
-        });
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('slide-up');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.slide-up, .fade-in').forEach(element => {
-            observer.observe(element);
-        });
-    </script>
-</body>
-</html>
+        <div
