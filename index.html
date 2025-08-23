@@ -90,24 +90,6 @@
             box-shadow: 0 5px 15px rgba(32, 178, 170, 0.4);
         }
         
-        .cta-button {
-            background: linear-gradient(135deg, #20B2AA, #008B8B);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(32, 178, 170, 0.3);
-        }
-        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
@@ -431,6 +413,24 @@
             font-size: 1.1rem;
             opacity: 0.9;
         }
+
+        /* --- INICIO ESTILOS NUEVA SECCIÓN EVENTOS --- */
+        .events-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 100px 0;
+        }
+        .event-image-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .event-image-container img {
+            width: 100%;
+            display: block;
+        }
+        /* --- FIN ESTILOS NUEVA SECCIÓN EVENTOS --- */
         
         /* FAQ Section */
         .faq {
@@ -533,8 +533,8 @@
 
         .final-cta {
             background: #000;
-            padding: 100px 0;
-            text-align: center;
+            padding-top: 100px;
+            /* Se elimina padding-bottom para unir con la nueva sección */
         }
         
         .final-cta h2 {
@@ -549,9 +549,32 @@
             color: #cccccc;
             margin-bottom: 40px;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 40px auto; /* Centrado y con margen inferior */
         }
+        
+        /* --- INICIO ESTILOS NUEVA SECCIÓN ALIADOS --- */
+        .partners {
+            background: #000;
+            padding: 40px 0 60px 0;
+            text-align: center;
+        }
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .partner-logos img {
+            max-height: 50px;
+            filter: grayscale(1) opacity(0.7);
+            transition: all 0.3s ease;
+        }
+        .partner-logos img:hover {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.1);
+        }
+        /* --- FIN ESTILOS NUEVA SECCIÓN ALIADOS --- */
         
         /* Footer */
         footer {
@@ -773,6 +796,17 @@
         </div>
     </section>
 
+    <section class="events-section" id="eventos">
+        <div class="container">
+            <div class="section-title slide-up">
+                <h2>Próximos Eventos</h2>
+                <p>¡No te quedes fuera! Asegura tu cupo para nuestra próxima experiencia.</p>
+            </div>
+            <div class="event-image-container slide-up">
+                <img src="meetme.web evento 23 septiembre.png" alt="Anuncio del próximo evento de meetme.club el 23 de septiembre">
+            </div>
+        </div>
+    </section>
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-title slide-up">
@@ -869,6 +903,14 @@
         </div>
     </section>
 
+    <section class="partners">
+        <div class="container">
+            <div class="partner-logos">
+                <img src="meetme.web TNFT Logo.png" alt="Logo The Next Fun Thing">
+                <img src="meetme.web LinLA Logo.png" alt="Logo Latinos in LA">
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <p>&copy; 2025 meetme.club | Todos los derechos reservados | Data-Driven Matches, Human-Driven Moments.</p>
