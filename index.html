@@ -241,7 +241,8 @@
         
         .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* MODIFICADO PARA FORZAR 2 COLUMNAS EN ESCRITORIO */
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             margin-top: 60px;
         }
@@ -328,8 +329,7 @@
         
         .features-grid {
             display: grid;
-            /* MODIFICADO PARA FORZAR 2 COLUMNAS EN ESCRITORIO */
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             margin-top: 60px;
         }
@@ -663,7 +663,7 @@
         <nav class="container">
             <div class="logo">
                 <a href="#inicio" style="text-decoration: none;">
-                    <img src="meetme.web favicon blanco.png" alt="meetme.club" class="logo">
+                    <img src="meetme.club.logo.website.png" alt="meetme.club" class="logo">
                 </a>
             </div>
             <ul class="nav-links">
@@ -918,7 +918,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 meetme.club | Todos los derechos reservados | Data-Driven Matches, Human-Driven Moments</p>
+            <p>&copy; 2025 meetme.club | Todos los derechos reservados | Data-Driven Matches, Human-Driven Moments.</p>
         </div>
     </footer>
 
