@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Términos y Condiciones - meetme.club</title>
     
-    <link rel="icon" type="image/png" sizes="32x32" href="meetme.web favicon blanco.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="meetme.web favicon blanco.png">
-    <link rel="shortcut icon" href="meetme.web favicon blanco.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="meetme.web favicon blanco.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meetme.web favicon blanco.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meetme.web favicon blanco.png">
+    <link rel="shortcut icon" href="/meetme.web favicon blanco.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/meetme.web favicon blanco.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,9 @@
         header { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 12px 0; }
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .logo { width: 120px; height: auto; }
+        .nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 20px; background: linear-gradient(135deg, #20B2AA, #008B8B); transition: all 0.3s ease; white-space: nowrap; }
+        .nav-links a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(32, 178, 170, 0.4); }
         main { padding: 120px 0 60px 0; }
         main h1 { font-size: 2.5rem; margin-bottom: 15px; text-align: center; color: #1a202c; }
         main .meta-info { text-align: center; color: #6c757d; margin-bottom: 40px; font-style: italic; }
@@ -33,12 +36,13 @@
         footer p { color: #666; }
         footer a { color: #666; text-decoration: none; transition: color 0.3s ease; }
         footer a:hover { color: #20B2AA; text-decoration: underline; }
+        @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="">
+            <div class="logo">
                 <a href="/index.html" style="text-decoration: none;">
                     <img src="/meetme.club.logo.website.png" alt="meetme.club" class="logo">
                 </a>
@@ -115,7 +119,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 meetme.club | Todos los derechos reservados | <a href="terminos.html">Términos y Condiciones</a> | Data-Driven Matches, Human-Driven Moments.</p>
+            <p>&copy; 2025 meetme.club | Todos los derechos reservados | <a href="/privacy">Términos y Condiciones</a> | Data-Driven Matches, Human-Driven Moments.</p>
         </div>
     </footer>
 </body>
