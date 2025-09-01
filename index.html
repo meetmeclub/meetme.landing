@@ -511,12 +511,6 @@
             margin-top: 15px;
         }
         
-        .faq-list p {
-            margin: 12px 0;
-            padding-left: 0;
-            position: relative;
-        }
-        
         .faq-list p::before {
             content: "•";
             color: #20B2AA;
@@ -582,6 +576,17 @@
         
         footer p {
             color: #666;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #20B2AA;
+            text-decoration: underline;
         }
         
         /* Responsive */
@@ -917,7 +922,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 meetme.club | Todos los derechos reservados | Data-Driven Matches, Human-Driven Moments</p>
+            <p>&copy; 2025 meetme.club | Todos los derechos reservados | <a href="Terminos_y_Condiciones.pdf" target="_blank">Términos y Condiciones</a> | Data-Driven Matches, Human-Driven Moments.</p>
         </div>
     </footer>
 
